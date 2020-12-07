@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
 
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="./navbar/nav.css">
+
 
 
     <style>
@@ -103,6 +105,24 @@
             }
 
         }
+        .glowing span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 90px;
+            background: #262626;
+            border: 4px solid #333;
+            font-size: 48px;
+            color: #333;
+            text-align: center;
+            line-height: 90px;
+            border-radius: 90px;
+            text-transform: uppercase;
+            transition: .5s;
+        }
+       
 
         @media only screen and(max-width: 800px) {
 
@@ -116,20 +136,74 @@
     background-position: 100%;
   }
 }
+.click{
+    flex-direction: column;
+    width: 12%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
     </style>
 
 </head>
 
 <body>
+<!-- navbar code -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand logo" href="workingdemo.html"><img src="../images/logo.JPG" alt=""></a>
+    <a class="navbar-brand solar1" href="workingdemo.html">Solar System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav1" id="collapsibleNavbar">
+      <ul class="navbar-nav color1">
+        <li class="nav-item">
+          <a class="nav-link spacing" href="#"><span></span>
+            <span></span>
+            <span></span>
+            <span></span> HOME</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle spacing spacing1" href="#" id="navbardrop" data-toggle="dropdown">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            PLANETS
+          </a>
+          <div class="dropdown-menu bg-dark">
+            <a class="dropdown-item" href="./sun/sun.html">Sun</a>
+            <a class="dropdown-item" href="./mercury/mercury.html">Mercury</a>
+            <a class="dropdown-item" href="./venus/venus.html">Venus</a>
+            <a class="dropdown-item" href="./earth/earth.html">Earth</a>
+            <a class="dropdown-item" href="./mars/mars.html">Mars</a>
+            <a class="dropdown-item" href="./jupiter/jupiter.html">Jupiter</a>
+            <a class="dropdown-item" href="./saturn/saturn.html">Saturn</a>
+            <a class="dropdown-item" href="./uranus/uranus.html">Uranus</a>
+            <a class="dropdown-item" href="./neptune/neptune.html">Neptune</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link spacing" href="./fact.html"><span></span>
+            <span></span>
+            <span></span>
+            <span></span> FACTS</a>
 
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- navbar end -->
     <!-- overview first content -->
     <h1 style="position: relative; z-index: 9;color: #d95a00;margin: 70px 0px;" class="text-center">THE SOLAR SYSTEM
     </h1>
+    <div class="click">
+        <button style="border: 2px solid#d95a00;background-color: black;cursor: pointer;"><a href="workingdemo.html" style="color:#d95a00 ;">Click Here for Working Demo</a></button>
 
-    <div class="container mt-5 container-first">
-        <div class="heading1 mb-2">
-            <h1 class=""></h1>
-        </div>
+    </div>
+        <div class="container mt-5 container-first">
+        
         <div class="container text-center">
             <div class="text-left">
                 <p class="first-para">Our solar system currently consists of the Sun, eight planets, five
@@ -157,7 +231,7 @@
                     call it a meteorite.
                 </p>
                 <div class="solar-system">
-                    <img src="img/solar.jpg" alt="">
+                    <img src="./images/ss.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -263,16 +337,17 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12 col-lg-4">
-                                        <img src="../images/mercury.png" class="card-img-top" style="width: 60%;">
+                                    <a href="./mercury/mercury.html"><img src="../images/mercury.png" class="card-img-top" style="width: 60%;"></a>   
                                 </div>
                                 <div class="col-sm-12 col-lg-4">
-                                    
-                                        <img src="../images/venus.png" class="card-img-top"  style="width: 90%;">
+                                    <a href="./venus/venus.html"><img src="../images/venus.png" class="card-img-top"  style="width: 90%;">
+                                    </a>
 
                                 </div>
                                 <div class="col-sm-12 col-lg-4">
                                     <div style="margin-left: 111px;">
-                                        <img src="../images/earth.png" class="card-img-top" style="width: 90%;">
+                                        <a href="./earth/earth.html"><img src="../images/earth.png" class="card-img-top" style="width: 90%;"></a>
+                                        
                                     </div>
 
                                 </div>
@@ -287,22 +362,18 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12 col-lg-4">
-                                
-                                        <img src="../images/mars.png" class="card-img-top"  style="width: 60%;">
+                                <a href="./mars/mars.html"> <img src="../images/mars.png" class="card-img-top"  style="width: 60%;"></a>
+                                       
                                    
 
                                 </div>
                                 <div class="col-sm-12 col-lg-4">
-                                
-                                        <img src="../images/jupiter.png" class="card-img-top" style="width: 60%;">
+                                <a href="./jupiter/jupiter.html"><img src="../images/jupiter.png" class="card-img-top" style="width: 60%;"></a>
                                 
 
                                 </div>
                                 <div class="col-sm-12 col-lg-4">
-                               
-                                        <img src="../images/saturn.png" class="card-img-top" >
-             
-
+                               <a href="./saturn/saturn.html"><img src="../images/saturn.png" class="card-img-top" ></a>
                                 </div>
 
                             </div>
@@ -315,14 +386,13 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12 col-lg-4">
-                                        <img src="../images/uranus.png" class="card-img-top" style="width: 60%;">
-                   
+                                    <a href="./uranus/uranus.html"><img src="../images/uranus.png" class="card-img-top" style="width: 60%;"></a>
                                 </div>
                                 <div class="col-sm-12 col-lg-4">
-                                        <img src="../images/neptune.png" class="card-img-top" style="width: 60%;">
+                                    <a href="./neptune/neptune.html"><img src="../images/neptune.png" class="card-img-top" style="width: 60%;"></a>               
                                 </div>
                                 <div class="col-sm-12 col-lg-4">  
-                                        <img src="../images/sun.png" class="card-img-top" style="width: 61%;">
+                                    <a href="./sun/sun.html"><img src="../images/sun.png" class="card-img-top" style="width: 61%;"></a> 
                                 </div>
                             </div>
                         </div>
@@ -342,9 +412,6 @@
     </div>
 
 </div>
-
-
-
 
 
     <!--footer-->
